@@ -42,8 +42,8 @@ def over?(board)
   won?(board) || full?(board)
 end 
 
-def winnner?(board, token)
-  if won?(board)
-    return token
+def winnner?(board)
+  if winning_combination = won?(board)
+    board[winning_combination]
   end 
 end 
