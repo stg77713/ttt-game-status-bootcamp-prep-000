@@ -18,6 +18,14 @@ WIN_COMBINATIONS = [
 # Define won method 
 def won?(board)
   WIN_COMBINATIONS.detect do |win_combination|
+    # basically if the combinations are equal to one another
+    # and there is a position taken 
+    # we change index with win_combination[0] to represent
+    # the fact that the position taken is a win.
+    # return true 
     board[win_combination[0]] == board[win_combination[1]] && board[win_combination[1]] == board[win_combination[2]] && position_taken?(board,win_combination[0])
   end 
 end
+
+def full?(board)
+  
