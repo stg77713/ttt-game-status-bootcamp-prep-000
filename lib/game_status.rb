@@ -37,4 +37,7 @@ end
 
 def over?(board)
   full?(board) || !won?(board) || !full?(board)
+  if !won?(board) && !full?(board)
+    false 
+  end 
 end 
