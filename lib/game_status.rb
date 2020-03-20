@@ -28,6 +28,7 @@ def won?(board)
 end
 
 def full?(board)
+  # remember all enumerable states if the board has all 
   board.all?{|token| token == "X" || token == "O"}
 end 
 
@@ -36,5 +37,7 @@ def draw?(board)
 end 
 
 def over?(board)
+  # game is over when the game is won?(board)
+  # or if the board is full is the only way
   won?(board) || full?(board)
 end 
