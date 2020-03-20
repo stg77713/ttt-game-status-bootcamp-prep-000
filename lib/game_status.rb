@@ -44,6 +44,8 @@ end
 
 def winner(board)
   if winning_combination = won?(board)
+    # if there is a winner return the 
+    # first array of the winning combination
     board[winning_combination.first]
   end 
 end 
