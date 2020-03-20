@@ -41,3 +41,9 @@ def over?(board)
   # or if the board is full is the only way
   won?(board) || full?(board)
 end 
+
+def winnner?(board, token)
+  if won?(board)
+    return token
+  end 
+end 
